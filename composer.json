@@ -11,14 +11,30 @@
             "homepage": "http://www.openidenabled.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "https://pear.php.net"
+        }
+    ],
     "require": {
-        "php": ">=5.6",
-        "ext-gmp": "*",
+        "php": ">=4.3",
+        "ext-bcmath": "*",
         "ext-curl": "*",
-        "ext-dom": "*"
+        "ext-dom": "*",
+        "pear-pear.php.net/MDB2": "*"
+    },
+    "suggest": {
+        "ext-gmp": "*"
+    },
+    "require-dev": {
+        "pear-pear.php.net/PHPUnit": "^1.0"
     },
     "autoload": {
         "classmap": ["Auth"]
+    },
+    "autoload-dev": {
+        "classmap": ["Tests/Auth"]
     },
     "include-path": ["."]
 }
